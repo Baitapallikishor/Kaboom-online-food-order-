@@ -1,0 +1,58 @@
+<div class="payment-container">
+    <h2>Payment Summary</h2>
+  
+    <!-- Display Order Details -->
+    <div class="order-details">
+        <h3>Order Details</h3>
+        <p><strong>Address:</strong> {{ orderDetails?.address }}</p>
+        <p><strong>Total Price:</strong> ₹{{ orderDetails?.totalPrice }}</p>
+        <p><strong>Items:</strong></p>
+        <ul>
+            <li *ngFor="let item of orderDetails?.cartItems">
+                <div class="order-item">
+                    <img [src]="item.imageUrl" [alt]="item.name" class="order-item-image" />
+                    <span>{{ item.name }} (₹{{ item.price }}) - Quantity: {{ item.quantity }}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+  
+    <!-- Payment Method Selection -->
+    <div class="payment-method">
+        <h3>Select Payment Method</h3>
+        <div class="payment-methods">
+            <div *ngFor="let method of paymentMethods" class="payment-option">
+                <label>
+                    <!-- Radio button for each payment method -->
+                    <input type="radio" [value]="method" [(ngModel)]="selectedPaymentMethod" name="paymentMethod" />
+
+                    <!-- Conditional rendering for payment method icons -->
+                    <img *ngIf="method === 'Google Pay'" src="assets/google pay.png" alt="Google Pay" class="payment-icon" />
+                    <img *ngIf="method === 'PhonePe'" src="assets/phone pay.png" alt="PhonePe" class="payment-icon" />
+                    <img *ngIf="method === 'Cash on Delivery'" src="assets/cash on dilvery.png" alt="Cash on Delivery" class="payment-icon" />
+                    <img *ngIf="method === 'Paytm'" src="assets/paytm.png" alt="Paytm" class="payment-icon" />
+                    <img *ngIf="method === 'UPI'" src="assets/upi.png" alt="UPI" class="payment-icon" />
+
+                    <!-- Display method name -->
+                    {{ method }}
+                </label>
+            </div>
+        </div>
+    </div>
+  
+    <!-- QR Code Display -->
+    <div class="qr-code-container" *ngIf="selectedPaymentMethod">
+        <h3>Scan the QR code to make the payment</h3>
+        
+        <!-- Conditionally show the QR code based on the selected payment method -->
+        <img *ngIf="selectedPaymentMethod === 'Google Pay'" src="assets/google payQR.jpg" alt="Google Pay QR" class="qr-code-image" />
+        <img *ngIf="selectedPaymentMethod === 'PhonePe'" src="assets/phone pay QR.jpg" alt="PhonePe QR" class="qr-code-image" />
+        <img *ngIf="selectedPaymentMethod === 'Paytm'" src="assets/paytm QR.jpg" alt="Paytm QR" class="qr-code-image" />
+        <img *ngIf="selectedPaymentMethod === 'UPI'" src="assets/upi-qr.png" alt="UPI QR" class="qr-code-image" />
+    </div>
+
+    <!-- Confirm Payment Button -->
+    <div class="confirm-payment">
+        <button (click)="confirmPayment()">Confirm Payment</button>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="activity-container">
+  <h2>Activity Page</h2>
+
+  <!-- Display the menu items -->
+  <ul>
+    <li *ngFor="let item of menuItems">
+      <!-- Check if it's the "Reviews" or "Online Ordering" item and bind the click event -->
+      <a *ngIf="!item.isReviewButton && !item.isOrderButton" [routerLink]="item.link">{{ item.label }}</a>
+      
+      <button *ngIf="item.isReviewButton" (click)="toggleReviewComponent()">{{ item.label }}</button>
+      
+      <button *ngIf="item.isOrderButton" (click)="toggleOrderComponent()">{{ item.label }}</button>
+    
+      <button *ngIf="item.isAccountSettingsButton" (click)="toggleAccountSettingsComponent()">{{ item.label }}</button>
+   
+    
+    </li>
+  </ul>
+
+  <!-- Conditionally display the ReviewComponent -->
+  <app-review *ngIf="showReviewComponent"></app-review>
+
+  <!-- Conditionally display the OrderComponent -->
+  <app-order *ngIf="showOrderComponent"></app-order>
+  <app-account-settings *ngIf="showAccountSettingsComponent"></app-account-settings> 
+
+</div>

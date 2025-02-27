@@ -1,0 +1,72 @@
+<div class="cart-container">
+  <h2>Cart Summary</h2>
+
+  <ul>
+    <li *ngFor="let item of cartItems" class="cart-item">
+      <div class="item-image">
+        <img [src]="item.imageUrl" [alt]="item.name" />
+      </div>
+      <div class="item-details">
+        <h3>{{ item.name }}</h3>
+        <p>Price: ₹{{ item.price }}</p>
+        <div class="quantity-controls">
+          <button (click)="decreaseQuantity(item.id)">-</button>
+          <span>{{ item.quantity }}</span>
+          <button (click)="increaseQuantity(item.id)">+</button>
+        </div>
+      </div>
+      <div class="remove-item">
+        <button class="remove-btn" (click)="removeItem(item.id)">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  <p class="total-price">
+    <strong>Total Price:</strong> ₹{{ totalPrice }}
+  </p>
+
+  <div class="address-section">
+    <h3>Select Address</h3>
+    <select [(ngModel)]="selectedAddress">
+      <option *ngFor="let address of addresses" [value]="address">
+        {{ address }}
+      </option>
+    </select>
+
+    <div class="address-section">
+      <h4>Add an Address</h4>
+      <input
+        type="text"
+        [(ngModel)]="newAddress"
+        placeholder="Enter new address"
+      />
+      <button (click)="addAddress()">Add Address</button>
+
+      <div *ngIf="isNewAddressAdded">
+        <p>
+          Newly added address: <strong>{{ newAddress }}</strong>
+        </p>
+        <button (click)="confirmAddress()">Confirm Address</button>
+      </div>
+
+      <h3>Available Addresses</h3>
+      <ul>
+        <li *ngFor="let address of addresses">
+          <label>
+            <input
+              type="radio"
+              [value]="address"
+              [(ngModel)]="selectedAddress"
+              name="address"
+            />
+            {{ address }}
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <button (click)="confirmOrder()">Proceed to Payment</button>
+</div>

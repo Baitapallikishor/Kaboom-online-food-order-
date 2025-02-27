@@ -1,0 +1,230 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem;
+    
+    margin-top: 7%;
+}
+.container  > *{
+    min-width: 10rem;
+    max-height: 20rem;
+    box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.5);
+}
+img{
+    border-radius:15%;
+    flex: 0.5;
+    object-fit: cover;
+margin: 1rem;
+box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.5);
+}
+.details{
+    
+    flex-direction: column;
+     border-radius: 2rem;
+     padding: 2rem;
+    color: black;
+    flex-wrap: wrap;
+    
+
+}
+.details .name{
+    font-size: 2rem;
+    font-weight: bold;
+    flex-wrap: wrap;
+    
+}
+
+.details .favorite {
+    color: red;
+    font-size: 3rem;
+}
+
+.details .favorite.not{
+    color: gray;
+}
+.details .origin{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    
+}
+
+.details .origin > span{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    margin: 0.1rem 0.3rem 0.1rem 0;
+    background-color: rgb(246, 5, 5);
+    color: white;
+}
+.cook-time{
+    font-size:1.2rem;
+    color:blue;
+    font-weight: 700;
+}
+
+.details button{
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(253, 1, 1);
+    border-radius: 1rem;
+    outline-style: none;
+    list-style: none;
+    cursor: pointer;
+    border: none;
+   padding: 10px 60px 10px 60px;
+   margin-top: 20px;
+   color:white;
+   font-size: 1.2rem;
+   
+
+}
+
+.details button:hover{
+    background-color: rgb(238, 231, 16);
+    opacity: 0.9;
+    color:red;
+}
+.details button:active {
+    background-color:white;
+    transform: scale(0.98);
+    color:green
+  }
+
+  .details .price{
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color:green
+
+  }
+ 
+  .details .price::before{
+    content: "price:";
+    color: gray;
+  }
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*sec-2 -------------*/
+
+  /* Container styles */
+.sec2 {
+    padding: 20px;
+    background-color: #ecf8ff;
+}
+
+/* Titleplaces container */
+.titleplaces {
+    display: flex;                  /* Use Flexbox to arrange items in a row */
+    justify-content: flex-end;      /* Align items to the right side */
+    list-style-type: none;
+    padding: 0;
+    gap: 20px;                      /* Space between the items */
+}
+
+/* Style for each list item inside titleplaces */
+.titleplaces li {
+    display: flex;                  /* Align items inside each <li> */
+    align-items: center;            /* Vertically center the items */
+    position: relative;
+}
+
+/* Flag image inside country dropdown */
+.country-flag {
+    width: 20px;
+    height: 15px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Language Dropdown Styles */
+.language-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Style for language list items */
+.language li {
+    padding: 8px 12px;
+}
+
+.language li a {
+    text-decoration: none;
+    color: black;
+}
+
+.language li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the language dropdown when hovering over the language list item */
+.language:hover .language-dropdown {
+    display: block;
+}
+
+
+/* Details section styles */
+.titledetails {
+    margin:2% 7% 0% 16%;
+    display: flex;
+
+}
+
+.details-group {
+    margin-bottom: 20px;
+    margin-left: 4%;
+}
+
+.details-group h5 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.details-group ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.details-group li {
+    padding: 5px 0;
+}
+
+/* Social media links styles */
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #0073b1; /* LinkedIn color as an example */
+}

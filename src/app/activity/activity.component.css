@@ -1,0 +1,128 @@
+/* Main Layout */
+.app-container {
+  display: flex;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background-color:white;
+  height: 100vh;
+  padding: 20px 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+  margin-left: 9%;
+  border: 10px solid white;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  color: black;
+  font-size: 10px;
+  width: 100px; /* Set a width for the list */
+  padding: 20px;
+  background-color: #f9f9f9;
+  width: 100px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+
+ul li {
+  padding: 10px;
+  margin-bottom: 10px; /* Spacing between items */
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for each item */
+  transition: box-shadow 0.3s ease; /* Smooth transition effect */
+   width: 200px;
+   font-size: 20px;
+
+}
+
+ul li:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Darker shadow when hovered */
+}
+
+/* Style the button or link */
+ul li a, ul li button {
+  text-decoration: none; /* Remove underlines from links */
+  font-size: 16px;
+  color: #333;
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Make the button or link fill the <li> */
+}
+
+ul li button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ul li button:hover {
+  background-color: #45a049;
+}
+/*
+ul {
+  width: 100px; 
+  padding: 20px;
+  list-style-type: none; 
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin: 0 auto; 
+*/
+ 
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 19px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li a:active {
+  background-color:red;
+  color:white
+}
+
+.sidebar ul li a.danger {
+  color: red;
+  
+}
+
+.sidebar ul li a.danger:active{
+  color: white;
+  background-color: black;
+}
+/* Content Area Styling */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+  margin-right: 8.5%;
+}
+
+.content-box {
+
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.empty-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.empty-image {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}

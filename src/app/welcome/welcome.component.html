@@ -1,0 +1,302 @@
+<!-- welcome.component.html -->
+
+<div class="nav">
+  <div>
+      <h4>Get the app</h4>
+  </div>
+  <ul class="navbar">
+      <li>Add Restaurant</li>
+     <li (click)="openpopup()">login</li>
+  <li (click)="openpopup1()">Signup</li>
+  </ul>
+  
+</div>
+<div class="overlay1" *ngIf="show">
+    <div class="content">
+      
+        <div class="close" (click)="closepopup()">
+            &times;
+        </div>
+        <h2>Login</h2>
+        
+        <div class="email">
+            <label for="username">Email:</label>
+            <input id="username" type="text" [(ngModel)]="username"  placeholder="enter user email" required>
+        </div>
+        <div class="password">
+            <label for="password">Password:</label>
+            <input id="password" type="password" [(ngModel)]="password" placeholder="enter user password"  required>
+        </div>
+        <div class="login">
+        <button (click)="signup()">login</button>
+        </div>
+        <div class="create-account">
+       <p> New to DADDYDADDY?</p>
+        <span   (click)="openpopup1()">Create account</span>
+        </div>
+    </div>
+  </div>
+
+  
+    
+<!--sinup()-->
+
+<!-- Signup Popup -->
+<div *ngIf="isPopupOpen" class="popup-container">
+  <div class="popup">
+    <div class="singupclose">
+    <button type="button" (click)="isPopupOpen = false"> &times;</button>
+    </div>
+    
+    <h2>Signup</h2>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input id="name" type="text" placeholder="Enter the username" required minlength="3" />
+      <div class="error" id="nameError"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="email" type="email" placeholder="Enter the user Email" required />
+      <div class="error" id="emailError"></div>
+    </div>
+
+    <div class="form-group1">
+      <label for="password">Password:</label>
+      <input id="password" type="password"  placeholder="Enter the password" required minlength="6" />
+      <div class="error" id="passwordError"></div>
+    </div>
+    <div class="form-group2">
+      <label for="currentPassword">Current Password</label>
+      <input id="currentPassword" type="password" placeholder="Enter the current password" required minlength="6" />
+      <div class="error" id="currentPasswordError"></div>
+    </div>
+    <!-- Signup Button, which triggers the form validation -->
+     <div class="singup">
+    <button type="button" (click)="onSignupClick()">Signup</button>
+
+    <!-- Close Button to hide the popup -->
+     </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="head">
+  <div class="styled-word">Kaboom</div>
+  <h3>Discover the best food & drinks</h3>
+  <div class="search">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>palasa</p>
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" placeholder="search for Restaurant,cuisine or a dish">
+  </div>
+  <div class="head-img">  
+  </div> 
+</div>
+
+
+<!--middle-->
+<div class="middlebody">
+
+    <section class="sec1">
+    <div class="slide-cintainer">
+     <div class="slide-content">
+         <div class="card-warpper">
+             <div class="card">
+               <div class="back"><h1>kishor</h1>
+                 <button class="button">click me</button>
+               </div>
+                  <div class="image-content">
+                     <span class="overlay"></span>
+                     <div class="card-image">
+                      <img src="https://partywitty.com/master/assets/uploads/1718707747_5d14975032fa449c9620.jpg" alt="" class="card-img">
+                     </div>
+                   </div>
+                   <div class="card-content">
+                     <h2 class="name">Non-Veg Food</h2>
+                     <p class="description">Non-vegetarian food refers to dishes that include animal-based ingredients such as meat, poultry, fish, and sometimes eggs and dairy products. Essentially, non-vegetarian food includes any animal-derived protein sources.
+ 
+                     </p>
+                     <button class="button">view more</button>
+                 </div>
+            </div>
+             
+         </div>
+     </div>
+
+     <div class="slide-content">
+        <div class="card-warpper">
+            <div class="card">
+              <div class="back"><h1>kishor</h1>
+                <button class="button">click me</button></div>
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                     <img src="https://t4.ftcdn.net/jpg/06/03/64/07/360_F_603640779_QNVbk3tSd5nEU1uAO7RifpHUjLZCsjDJ.jpg" alt="" class="card-img">
+                    </div>
+                    </div>
+                <div class="card-content">
+                    <h2 class="name">Veg Food Order</h2>
+                    <p class="description">Vegetarian food refers to dishes that are made using only plant-based ingredients, and may exclude meat, poultry, fish, and sometimes other animal-derived products such as dairy or eggs</p>
+                    <button class="button">view more</button>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    </div>
+    </section>
+
+    <!--sec-2-->
+
+    <section class="middle">
+        <div class="sec-2">
+          <h2>collections</h2>
+          <div>
+            <h6>Explore curated lists of top restaurants, cafes, pubs, and bars in Mysore, based on trends</h6>
+          <span>ALL collection in myScore<i class="fa-sharp fa-solid fa-caret-right"></i></span>
+          
+          </div>
+      </div>
+      <!--section-3-->
+      <div class="sec-3">
+        <div class="box-1">
+          <div><!--<span>bar Opended<br>17places</span><i class="fa-sharp fa-solid fa-caret-right"></i>
+          --><img src="https://images5.alphacoders.com/462/thumb-1920-462280.jpg" alt="">
+          </div>
+        </div>
+        <div class="box-1">
+         <div><!--<span>bar Opended<br>17places</span><i class="fa-sharp fa-solid fa-caret-right"></i>
+         --> <img src="https://b.zmtcdn.com/data/collections/d33b7f16f6f9549049b2c1ac96970be4_1722947554.jpg" alt="">
+          </div>
+        </div>
+        <div class="box-1">
+          <div>
+          <img src="https://img.freepik.com/premium-photo/popcorn-kernels-background_996135-223.jpg" alt="">
+          </div>
+        </div>
+        <div class="box-1">
+          <div>
+          -<img src="https://content.jdmagicbox.com/comp/mysore/l5/0821px821.x821.180827103642.s1l5/catalogue/north-avenue-hebbal-mysore-restaurants-n6oebgised-250.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      </section>
+      
+      </div>
+
+
+      <div class="sec-4">
+        <div>
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/39e676188216949.Y3JvcCwxOTIwLDE1MDEsMCwxNTI.jpg" alt="">
+        </div>
+         <div class="registred">
+          <h2>Get the DADDYDADDY app</h2>
+          <span>We will send you a link, open it on your phone to download the app</span>
+           <br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          
+          <button type="submit">Share App Link</button>
+          <div class="downloadapp">
+          <h4>download app from</h4>
+          <a href="https://www.zomato.com/"><img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" alt=""></a>
+         <a href="https://www.zomato.com/"> <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" alt=""></a>
+      </div>
+        </div>
+    </div>
+
+    <section class="sec2">
+        <div class="title">
+          <div class="titlename">
+              <div>
+                  <h4>Kaboom</h4>
+              </div>
+              
+            </div>
+
+              
+          <ul class="titleplaces">
+            <!-- Country Dropdown with Flag (This will be aligned to the right side) -->
+            <li class="country">
+                <i class="fa-solid fa-caret-down"></i>
+                <span>
+                    <img src="/assets/india.png" alt="India Flag" class="country-flag">
+                    India
+                </span>
+            </li>
+                 
+                    
+                    <!-- Language Dropdown -->
+                    <li class="language">
+                        <i class="fa-solid fa-caret-down"></i>
+                        <span>Select Language</span>
+                        <ul class="language-dropdown">
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Hindi</a></li>
+                            <li><a href="#">Spanish</a></li>
+                            <li><a href="#">French</a></li>
+                            <!-- Add more languages here -->
+                        </ul>
+                    </li>
+                </ul>
+
+
+            <div class="titledetails">
+                <ul>
+                  <h5>ABOUT DADDYDADDY</h5>
+                  <li>Who We Are</li>
+                  <LI>Blog</LI>
+                  <li>Work With Us</li>
+                  <li>Report Fraud</li>
+                  <li>Press Kit</li>
+                  </ul>
+                  <ul> 
+                    <h5>DAMAVERSE</h5>
+                    <li>DADDYDADDY</li>
+                    <li>District</li>
+                    <li>DaddyDaddy Live</li>
+            </ul>
+            
+            <ul>
+            <h5>For Restaurants</h5>
+            <li>Partner With Us</li>
+            <li>Apps For You</li>
+            
+            </ul>
+            <ul>
+              <h5>Learn More</h5>
+              <li>
+                Privacy
+            </li>
+            <li>    
+                Security</li>
+                
+             <li>Terms</li>
+            </ul>
+            <ul>
+              <h5>social links </h5>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+            
+            </ul>
+              </div>
+            
+               </div>
+            
+              
+            </section>
+    
+
+           
+
+

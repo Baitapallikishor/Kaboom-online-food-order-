@@ -1,0 +1,35 @@
+<div class="review-container">
+    <h2>User Reviews</h2>
+  
+    <!-- Form to add a new review -->
+    <div class="new-review">
+      <h3>Leave a Review</h3>
+      <label for="user">Name:</label>
+      <input type="text" id="user" [(ngModel)]="newReview.user" placeholder="Your name">
+  
+      <label for="rating">Rating:</label>
+      <select id="rating" [(ngModel)]="newReview.rating">
+        <option value="0" disabled>Select a rating</option>
+        <option *ngFor="let rating of [1, 2, 3, 4, 5]" [value]="rating">{{ rating }}</option>
+      </select>
+  
+      <label for="comment">Comment:</label>
+      <textarea id="comment" [(ngModel)]="newReview.comment" placeholder="Your comments"></textarea>
+  
+      <button (click)="addReview()">Submit Review</button>
+    </div>
+  
+    <!-- Displaying reviews -->
+    <div class="reviews-list" *ngIf="reviews.length">
+      <h3>Reviews:</h3>
+      <div *ngFor="let review of reviews" class="review">
+        <p><strong>{{ review.user }}</strong> rated it {{ review.rating }}/5</p>
+        <p>{{ review.comment }}</p>
+      </div>
+    </div>
+  
+    <div *ngIf="!reviews.length">
+      <p>No reviews yet!</p>
+    </div>
+  </div>
+  

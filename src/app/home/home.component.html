@@ -1,0 +1,201 @@
+
+<app-search></app-search>
+<app-tags></app-tags>
+<app-itemlogo></app-itemlogo>
+<ul>
+
+    <div class="itemfoodimg">
+   <h1>Inspiration for your first order</h1>
+    <div class="image-scroll-container">
+        
+        <div class="recently-added">
+            <img src="https://b.zmtcdn.com/data/o2_assets/bf2d0e73add1c206aeeb9fec762438111727708719.png" alt="Recently Added 1" class="added-image">
+            <h2>biryani</h2>
+        
+        </div>
+    
+       
+        <div class="recently-added">
+            <img src="https://b.zmtcdn.com/data/dish_images/197987b7ebcd1ee08f8c25ea4e77e20f1634731334.png" alt="Recently Added 3" class="added-image">
+            <h2>Chicken</h2>
+        </div>
+    
+        <div class="recently-added">
+            <img src="https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png" alt="Recently Added 4" class="added-image">
+            <h2>Pizza</h2>
+        
+        </div>
+    
+        <div class="recently-added">
+            <img src="https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png" alt="Recently Added 5" class="added-image">
+            <h2>Burger</h2>
+       
+        </div>
+    
+        <div class="recently-added">
+            <img src="https://b.zmtcdn.com/data/o2_assets/8dc39742916ddc369ebeb91928391b931632716660.png" alt="Recently Added 6" class="added-image">
+            <h2>Dosa</h2>
+        
+        </div>
+        <div class="recently-added">
+            <img src="https://b.zmtcdn.com/data/o2_assets/52eb9796bb9bcf0eba64c643349e97211634401116.png" alt="Recently Added 6" class="added-image">
+            <h2>Thali</h2>
+       
+        </div>
+        <div class="recently-added">
+            <img src="https://b.zmtcdn.com/data/o2_assets/019409fe8f838312214d9211be010ef31678798444.jpeg" alt="Recently Added 6" class="added-image">
+            <h2>North Indian</h2>
+        </div>
+        <div class="recently-added">
+            <img src="https://b.zmtcdn.com/data/dish_images/d5ab931c8c239271de45e1c159af94311634805744.png" alt="Recently Added 6" class="added-image">
+        <h2>cake</h2>
+        </div>
+
+        <div class="recently-added">
+            <img src="https://b.zmtcdn.com/data/dish_images/c2f22c42f7ba90d81440a88449f4e5891634806087.png" alt="Recently Added 6" class="added-image">
+        <h2>Rolls</h2>
+        </div>
+        <div class="recently-added">
+            <img src="https://b.zmtcdn.com/data/o2_assets/e444ade83eb22360b6ca79e6e777955f1632716661.png" alt="Recently Added 6" class="added-image">
+        <h2>Fried Rice</h2>
+        </div>
+        <div class="recently-added">
+            <img src="https://b.zmtcdn.com/data/dish_images/a9481ab8dce1f7cd553fe5dd6f47f7b91637241749.png" alt="Recently Added 6" class="added-image">
+        <h2>Sweets</h2>
+        </div>
+
+    </div>
+    </div>
+    <h1>Food Delivery Restaurants in Chatta Bazaar, Malakpet, Hyderabad</h1>
+    <li *ngFor="let food of food">
+        <a routerLink="/food/{{food.id}}">
+        <img src="{{food.imageUrl}}" alt="food">   
+        <div class="content">
+            <div class="name">
+                {{food.name}}
+                <span  class="favorite {{food.favorite?'':'not'}}"> <td style="padding-left:0">💕</td></span>
+            </div>
+           
+            <div class="product-item-footer">
+                <div class="oriigins">
+                    <span *ngFor="let oriigins of food.oriigins">{{oriigins}}</span>
+                </div>
+            </div>
+
+        
+
+      <div class="stars">
+        <span *ngFor="let star of getStars(food.star)">
+          <span *ngIf="star === 'full'"><i class="fa fa-star" style="color: red;"></i>
+          </span>
+          <span *ngIf="star === 'half'"><i class="fa fa-star-half-alt" style="color: red;"></i>
+          </span>
+          <span *ngIf="star === 'empty'"><i class="fa fa-star-o" style="color: red;"></i>
+          </span>
+        </span>
+      </div>
+
+            <div class="cook-time">
+                <span><td>⏰</td></span>
+                {{food.cookTime}}
+            </div>
+        
+            <div class="price">
+                {{food.price | currency :'INR'}}
+            </div>
+      
+        </div>
+        </a>
+    </li>
+</ul>
+ <!-- Parent Component: Overview + Reviews + Ordering -->
+ <section class="sec2">
+    <div class="title">
+      <div class="titlename">
+          <div>
+              <h4>DADDYDADDY</h4>
+          </div>
+          
+        </div>
+
+          
+      <ul class="titleplaces">
+        <!-- Country Dropdown with Flag (This will be aligned to the right side) -->
+        <li class="country">
+            <i class="fa-solid fa-caret-down"></i>
+            <span>
+                <img src="/assets/india.png" alt="India Flag" class="country-flag">
+                India
+            </span>
+        </li>
+             
+                
+                <!-- Language Dropdown -->
+                <li class="language">
+                    <i class="fa-solid fa-caret-down"></i>
+                    <span>Select Language</span>
+                    <ul class="language-dropdown">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Hindi</a></li>
+                        <li><a href="#">Spanish</a></li>
+                        <li><a href="#">French</a></li>
+                        <!-- Add more languages here -->
+                    </ul>
+                </li>
+            </ul>
+
+
+        <div class="titledetails">
+            <ul>
+              <h5>ABOUT DADDYDADDY</h5>
+              <li>Who We Are</li>
+              <LI>Blog</LI>
+              <li>Work With Us</li>
+              <li>Report Fraud</li>
+              <li>Press Kit</li>
+              </ul>
+              <ul> 
+                <h5>DAMAVERSE</h5>
+                <li>DADDYDADDY</li>
+                <li>District</li>
+                <li>DaddyDaddy Live</li>
+        </ul>
+        
+        <ul>
+        <h5>For Restaurants</h5>
+        <li>Partner With Us</li>
+        <li>Apps For You</li>
+        
+        </ul>
+        <ul>
+          <h5>Learn More</h5>
+          <li>
+            Privacy
+        </li>
+        <li>    
+            Security</li>
+            
+         <li>Terms</li>
+        </ul>
+        <ul>
+          <h5>social links </h5>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+        
+        </ul>
+          </div>
+        
+           </div>
+        
+          
+        </section>
+
+
+ 
+ 
+  
+ 
+ 

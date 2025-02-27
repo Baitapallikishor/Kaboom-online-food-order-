@@ -1,0 +1,115 @@
+
+
+
+
+
+
+.payment-container {
+    padding: 20px;
+  }
+  
+  .order-details {
+    margin-bottom: 20px;
+  }
+  
+  .payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Adding a soft box shadow to the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 15px;
+    background-color: #fff; /* Ensure the background contrasts with shadow */
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hovering */
+}
+
+.payment-option:hover {
+    /* Scale and add shadow on hover for better interactivity */
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.payment-option img {
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for icons */
+}
+
+.payment-option:hover img {
+    /* Slightly enlarge the image and apply a filter for hover effect */
+    transform: scale(1.1);
+    filter: brightness(1.2); /* Brighter icon effect */
+}
+
+/* Optional: Hover animation on the whole payment method container */
+.payment-methods:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Bigger shadow when container is hovered */
+}
+
+
+  .order-item img {
+    width: 27%;
+    height: 17%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  .order-item span{
+    color:red;
+    font-size: 25px;
+  }
+
+  .payment-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+
+
+  .qr-code-container {
+    margin-top: 20px;
+    text-align: center;
+    /* Adding a subtle box shadow to the QR code container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff; /* Ensures background contrasts with shadow */
+    border-radius: 10px; /* Optional: Rounded corners for a smooth look */
+}
+
+.qr-code-image {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.confirm-payment button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Adding rounded corners to the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adding a box shadow to the button */
+    transition: background-color 0.3s, box-shadow 0.3s ease; /* Smooth transition on hover */
+    display: block; /* Make the button a block element */
+    margin: 20px auto; /* Center the button horizontally with automatic margins */
+    text-align: center; /* Ensure the text inside the button is centered */
+    width: auto; /* Ensures the button does not stretch */
+}
+
+.confirm-payment button:hover {
+    background-color: #45a049;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+
+ 

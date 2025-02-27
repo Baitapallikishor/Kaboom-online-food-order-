@@ -1,0 +1,17 @@
+.biryani-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .biryani-item {
+    width: 200px;
+    text-align: center;
+  }
+  
+  .biryani-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  

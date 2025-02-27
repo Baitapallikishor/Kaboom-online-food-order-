@@ -1,0 +1,54 @@
+<div class="profile-container">
+    <div class="profile-header">
+      <img [src]="'/assets/profileimage.jpg'" alt="" class="profile-image" />
+      
+    
+
+    <div class="profile-details">
+      <h2>{{ profileData.name }}</h2>
+      <p>{{ profileData.email }}</p>
+      <p>{{ profileData.bio }}</p>
+  
+     </div>
+<div class="editprofile">
+     <button (click)="onEditProfile()">Edit Profile</button>
+     </div>
+    
+
+     <div *ngIf="isEditProfile" class="edit-profile-modal">
+      <h3>Edit Profile</h3>
+      <form (ngSubmit)="saveProfile()">
+        <div class="form-row">
+          <label for="name">Name:</label>
+          <input id="name" [(ngModel)]="profileData.name" name="name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email:</label>
+          <input id="email" [(ngModel)]="profileData.email" name="email" required />
+        </div>
+        <div class="form-row">
+          <label for="bio">Bio:</label>
+          <textarea id="bio" [(ngModel)]="profileData.bio" name="bio"></textarea>
+        </div>
+        <div class="form-row">
+          <label for="image">Profile Image:</label>
+          <input type="file" id="image" (change)="onFileSelected($event)" />
+        </div>
+    
+        <div class="form-actions">
+          <button type="submit">Save</button>
+          <button type="button" (click)="cancelEdit()">Cancel</button>
+        </div>
+      </form>
+    </div>
+    
+
+
+  </div>
+  </div>
+
+  <div>
+
+  <app-activity></app-activity>
+
+  </div>

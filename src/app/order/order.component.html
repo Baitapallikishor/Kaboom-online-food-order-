@@ -1,0 +1,21 @@
+<div class="payment-container">
+    <h2>conform Order</h2>
+
+    <!-- Display Order Details -->
+    <div class="order-details">
+        <h3>Order Details</h3>
+        <p><strong>Address:</strong> {{ orderDetails?.address }}</p>
+        <p><strong>Total Price:</strong> ₹{{ orderDetails?.totalPrice }}</p>
+        <p><strong>Items:</strong></p>
+        <ul>
+            <li *ngFor="let item of orderDetails?.cartItems">
+                <div class="order-item">
+                    <img [src]="item.imageUrl" [alt]="item.name" class="order-item-image" />
+                    <span>{{ item.name }} (₹{{ item.price }}) - Quantity: {{ item.quantity }}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Payment Method Selection -->
+    

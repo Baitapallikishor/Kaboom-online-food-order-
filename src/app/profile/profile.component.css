@@ -1,0 +1,153 @@
+.profile-container{
+
+  max-width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 4%;
+  background-image: url('/assets/backgroungimageice.jpg');
+  box-shadow: 10px 10px 5px gray;
+  
+}
+  
+
+.profile-header{
+  display: flex;
+}
+
+.profile-header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end; 
+  margin-top: 50px; 
+}
+
+.profile-details{
+
+  justify-content: space-between;
+  margin-right: 30%;
+  margin-left: 20px;
+
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  background-color: #4caf50; /* Green color for the button */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 50px;
+  
+  justify-content:space-between
+}
+
+button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+}
+
+ 
+
+/* Edit Profile Modal */
+.edit-profile-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1001;
+}
+
+/* Title styling */
+.edit-profile-modal h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Form styling */
+.edit-profile-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Row - Label and Input Styling */
+.edit-profile-modal .form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Label Styling */
+.edit-profile-modal label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  width: 120px; /* Set width for labels */
+  text-align: right;
+  margin-right: 10px;
+}
+
+/* Input, Textarea Styling */
+.edit-profile-modal input,
+.edit-profile-modal textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Textarea - Specific Styling */
+.edit-profile-modal textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* File Input Styling */
+.edit-profile-modal input[type="file"] {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+/* Button Styling */
+.edit-profile-modal button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  border: none;
+}
+
+.edit-profile-modal button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.edit-profile-modal button[type="button"] {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-profile-modal button:hover {
+  opacity: 0.9;
+}
+
+/* Cancel Button */
+.edit-profile-modal button[type="button"]:hover {
+  background-color: #e53935;
+}

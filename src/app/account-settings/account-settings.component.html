@@ -1,0 +1,57 @@
+<div class="account-settings-container">
+    <h2>Account Settings</h2>
+  
+    <!-- Display the menu items -->
+    <ul>
+      <li *ngFor="let item of menuItems">
+        <!-- Check if it's the "Update Profile", "Change Password", or "Delete Account" item and bind the click event -->
+        
+  
+        <button *ngIf="item.isProfileButton" (click)="toggleProfileComponent()">{{ item.label }}</button>
+        <button *ngIf="item.isPasswordButton" (click)="togglePasswordComponent()">{{ item.label }}</button>
+        <button *ngIf="item.isDeleteButton" (click)="toggleDeleteAccountComponent()">{{ item.label }}</button>
+      </li>
+    </ul>
+  
+    <!-- Conditionally display the Update Profile Section -->
+    <div *ngIf="showProfileComponent">
+      <h3>Update Profile</h3>
+      <!-- Your profile update form or information here -->
+      <form (ngSubmit)="updateProfile()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" [(ngModel)]="user.username" name="username" required />
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="user.email" name="email" required />
+  
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" [(ngModel)]="user.phone" name="phone" />
+  
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  
+    <!-- Conditionally display the Change Password Section -->
+    <div *ngIf="showPasswordComponent">
+      <h3>Change Password</h3>
+      <form (ngSubmit)="changePassword()">
+        <label for="current-password">Current Password:</label>
+        <input type="password" id="current-password" [(ngModel)]="passwords.currentPassword" name="currentPassword" required />
+  
+        <label for="new-password">New Password:</label>
+        <input type="password" id="new-password" [(ngModel)]="passwords.newPassword" name="newPassword" required />
+  
+        <label for="confirm-password">Confirm New Password:</label>
+        <input type="password" id="confirm-password" [(ngModel)]="passwords.confirmPassword" name="confirmPassword" required />
+  
+        <button type="submit">Change Password</button>
+      </form>
+    </div>
+  
+    <!-- Conditionally display the Delete Account Section -->
+    <div *ngIf="showDeleteAccountComponent">
+      <h3>Delete Account</h3>
+      <button (click)="deleteAccount()">Delete My Account</button>
+    </div>
+  </div>
+  

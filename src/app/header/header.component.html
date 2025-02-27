@@ -1,0 +1,28 @@
+<header>
+  <div class="container">
+
+    <a href="#" routerLink="/" class="logo">Kaboom</a>
+
+    <div class="header">
+
+      <div class="menu-bar" (click)="togglePopup()">
+        ☰
+      </div>
+    </div>
+
+    <div class="side-popup" [class.open]="isOpen">
+      <div class="popup-header">
+        <span>Menu</span>
+        <button class="close-btn" (click)="togglePopup()">×</button>
+      </div>
+      <ul class="popup-menu">
+        <li (click)="navigateTo('profile')">profile</li>
+        <li (click)="navigateTo('about')">About</li>
+        <li (click)="navigateTo('services')">Services</li>
+        <li (click)="navigateTo('contact')">Contact</li>
+      </ul>
+    </div>
+
+
+  </div>
+</header>

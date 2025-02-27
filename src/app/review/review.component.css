@@ -1,0 +1,91 @@
+/* Container for the entire review section */
+.review-container {
+    width: 500px; /* Set a width for the review container */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Position it relative to the viewport */
+    right: 20px; /* Move it to the right side of the page */
+    top: 20px; 
+    display: flex;
+    justify-content: center;
+    margin-right: 20%;
+    margin-left: 30%;
+    margin-top: 20%;
+  }
+  
+  /* Styling for the review title and form elements */
+  .new-review {
+    margin-top: 10%;
+  }
+  h2, h3 {
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin-bottom: 15px;
+  }
+  
+  /* New review form styles */
+  .new-review label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .new-review input,
+  .new-review select,
+  .new-review textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .new-review textarea {
+    height: 100px;
+  }
+  
+  /* Button style */
+  .new-review button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .new-review button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Review list styling */
+  .reviews-list {
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+  
+  .review {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .review strong {
+    font-size: 16px;
+  }
+  
+  /* Styling when no reviews exist */
+  .reviews-list p {
+    color: #777;
+  }
+  
